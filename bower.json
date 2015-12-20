@@ -1,0 +1,13 @@
+{
+  "name": "uikit-vue",
+  "description": "UIkit Vue.js implementation",
+  "homepage": "https://github.com/miljan-aleksic/uikit-vue",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

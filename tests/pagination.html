@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-center">
+
+        <h1>Pagination</h1>
+
+        <uv-pagination :items="100" :current="9"></uv-pagination>
+
+    </div>
+
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../dist/pagination.js"></script>
+    <script>
+      (function () {
+        new Vue({
+          el: 'body'
+        })
+      })();
+    </script>
+  </body>
+</html>
