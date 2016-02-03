@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    'all': './src/all',
+    'uikit-vue': './src/all',
     'modal': './src/modal',
     'pagination': './src/pagination'
   },
