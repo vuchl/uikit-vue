@@ -1,6 +1,6 @@
 <template>
   <div class="uk-modal" v-el:modal>
-    <div class="uk-modal-dialog" :class="classes">
+    <div class="uk-modal-dialog" :class="classes" v-html="content">
       <slot></slot>
     </div>
   </div>
@@ -13,14 +13,29 @@ var Vue = require('vue')
 export default {
   data: function () {
     return {
-      opened: false
+      visible: false
     }
   },
   props: {
-    large: Boolean,
-    lightbox: Boolean,
-    blank: Boolean,
-    closed: Function,
+    content: {
+      type: String,
+      default: false
+    },
+    large: {
+      type: Boolean,
+      default: false
+    },
+    lightbox: {
+      type: Boolean,
+      default: false
+    },
+    blank: {
+      type: Boolean,
+      default: false
+    },
+    closed: {
+      type: Function
+    },
     modifier: {
       type: String,
       default: ''
@@ -28,7 +43,13 @@ export default {
     options: {
       type: Object,
       default: function () {
-        return {}
+        return {
+          keyboard: true,
+          bgclose: true,
+          minScrollHeight: 150,
+          center: false,
+          modal: true
+        }
       }
     }
   },
@@ -38,7 +59,7 @@ export default {
     this.modal = UI.modal(this.$els.modal, Vue.util.extend({}, this.options))
     this.modal.on('hide.uk.modal', function () {
 
-      vm.opened = false
+      vm.visible = false
 
       if (vm.closed) {
         vm.closed()
@@ -74,12 +95,26 @@ export default {
     }
   },
   methods: {
-    open: function () {
-      this.opened = true
+    show: function () {
+      this.visible = true
       this.modal.show()
+      return this
     },
-    close: function () {
+    hide: function () {
       this.modal.hide()
+      return this
+    },
+    block: function () {
+      this.modal.options.bgclose = false,
+      this.modal.options.keyboard = false,
+      this.modal.options.modal = false
+      return this
+    },
+    unblock: function () {
+      this.modal.options.bgclose = true,
+      this.modal.options.keyboard = true,
+      this.modal.options.modal = true
+      return this
     }
   }
 }

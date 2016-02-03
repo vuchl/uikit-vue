@@ -12,30 +12,30 @@
       <h1>Modal</h1>
 
       <p>
-        <button class="uk-button" @click="$refs.modal.open">Open</button>
-        <button class="uk-button" @click="$refs.spinner.open">Spinner</button>
-        <button class="uk-button" @click="$refs.lightbox.open">Centered Lightbox</button>
-        <button class="uk-button" @click="$refs.blank.open">Blank (Fullscreen)</button>
+        <button class="uk-button" @click="$refs.modal.show">Open</button>
+        <button class="uk-button" @click="$refs.spinner.show">Spinner</button>
+        <button class="uk-button" @click="$refs.lightbox.show">Centered Lightbox</button>
+        <button class="uk-button" @click="$refs.blank.show">Blank (Fullscreen)</button>
         <button class="uk-button js-modal-confirm">Confirm</button>
       </p>
 
       <h2>Trigger new modal inside current modal</h2>
 
       <p>
-        <button class="uk-button" @click="$refs.group1.open">Open</button>
-        <button class="uk-button" @click="$refs.group2.open">Open</button>
+        <button class="uk-button" @click="$refs.group1.show">Open</button>
+        <button class="uk-button" @click="$refs.group2.show">Open</button>
       </p>
 
       <h2>Large dialog and overflow container</h2>
 
       <p>
-        <button @click="$refs.overflow.open" class="uk-button">Open</button>
+        <button @click="$refs.overflow.show" class="uk-button">Open</button>
       </p>
 
       <h2>Scrollbar</h2>
 
       <p>
-        <button class="uk-button" @click="$refs.scrollbar.open">Modal with scrollbar</button>
+        <button class="uk-button" @click="$refs.scrollbar.show">Modal with scrollbar</button>
       </p>
 
     </div>
@@ -78,14 +78,14 @@
         <button type="button" class="uk-modal-close uk-close"></button>
         <h1>Headline 1</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p><a href="" @click.prevent="$refs.group2.open">Next</a></p>
+        <p><a href="" @click.prevent="$refs.group2.show">Next</a></p>
       </uv-modal>
 
       <uv-modal class="uk-modal" v-ref:group2>
         <button type="button" class="uk-modal-close uk-close"></button>
         <h1>Headline 2</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p><a href="" @click.prevent="$refs.group1.open">Previous</a></p>
+        <p><a href="" @click.prevent="$refs.group1.show">Previous</a></p>
       </uv-modal>
 
       <uv-modal class="uk-modal" v-ref:overflow large>
