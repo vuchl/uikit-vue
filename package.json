@@ -1,5 +1,6 @@
 {
   "name": "uikit-vue",
+  "version": "0.0.1",
   "description": "UIkit Vue.js implementation",
   "author": "Miljan Aleksic",
   "private": true,
