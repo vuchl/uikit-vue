@@ -5,6 +5,9 @@
 ## Build Setup
 
 ``` bash
+# fetch frontend dependencies
+bower install
+
 # install dependencies
 npm install
 
