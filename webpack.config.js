@@ -4,6 +4,7 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     'uikit-vue': './src/all',
+    'button': './src/button',
     'modal': './src/modal',
     'pagination': './src/pagination'
   },

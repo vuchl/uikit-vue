@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Button</title>
+    <link rel="stylesheet" href="../node_modules/uikit/dist/css/uikit.min.css">
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-center">
+
+        <h1>Button</h1>
+        <h3>Types</h3>
+        <uv-button text="Anchor" :isbutton="false"></uv-button>
+        <uv-button :isbutton="true"></uv-button>
+
+        <hr>
+        
+        <h3>Colors</h3>
+        <uv-button color="primary"></uv-button>
+        <uv-button color="success"></uv-button>
+        <uv-button color="danger"></uv-button>
+        <uv-button color="link"></uv-button>
+
+        <hr>
+        
+        <h3>Sizes</h3>
+        <uv-button size="mini"></uv-button>
+        <uv-button size="small"></uv-button>
+        <uv-button size="default"></uv-button>
+        <uv-button size="large"></uv-button>
+
+        <hr>
+        
+        <h3>Widths</h3>
+        <uv-button width="1-2"></uv-button>
+        <uv-button width="3-4"></uv-button>
+        <uv-button width="9-10"></uv-button>
+        <uv-button width="1-1"></uv-button>
+        <uv-button width="fullwidth"></uv-button>
+        
+    </div>
+
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/uikit/dist/js/uikit.min.js"></script>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../dist/button.js"></script>
+    <script>
+      Vue.config.debug = true;
+      (function () {
+        new Vue({
+          el: 'body'
+        })
+      })();
+    </script>
+  </body>
+</html>
